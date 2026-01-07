@@ -1,0 +1,83 @@
+1.High-Level programming language
+2.Open Source and community driven just like Linux
+3.Includes many modules inbuilt
+4.Dynamic typed
+5.Can be compiled or just-in-time
+6.Easy to learn and read
+7.Python3 is latest, min 3.8 or later as it's very stable
+8.Pip is python package manager
+9.File must end with .py to be executable (python3 hello-world.py)
+10.Execution happens line by line (linear)
+11.The Python Package Index (PyPI) is a repository of software for the Python programming language.
+*****************************************
+
+Datatypes
+
+1.String >> Sentence,word,character
+2.Integer >> Whole Number (1,2,3,4,5,6,7,8.. etc)
+3.Float >> Decimal number (1.1,2.25... etc)
+4.Boolean >> True or False
+
+Conditional Operators:
+== - equal to
+!= - not equal to
+> - greater than
+< - less than
+>= - greater than or equal to
+<= - less than or equal to
+
+Types of Objects in Python3
+1.List
+2.Tuples
+3.Dictionary
+
+STDIN & STDOUT
+>>STDIN - Standard Input
+>>STDOUT - Standard Output
+
+Common Python Modules:
+1.os - Operating system interactions
+2.sys - System-specific parameters and functions
+3.math - Mathematical functions
+4.random - Generate random numbers
+5.datetime - Date and time handling
+6.json - JSON encoding and decoding
+7.re - Regular expressions
+8.collections - Specialized container datatypes
+9.itertools - Iterator functions
+10.functools - Higher-order functions
+11.requests - HTTP library for APIs
+12.numpy - Numerical computing
+13.pandas - Data manipulation and analysis
+14.matplotlib - Data visualization
+15.flask - Web framework
+
+Different File Modes:
+1.'r' - Read (default mode, file must exist)
+    with open('file.txt', 'r') as f:
+         content = f.read()
+
+2.'w' - Write (creates new file or overwrites existing)
+    with open('file.txt', 'w') as f:
+         f.write('Hello World')
+
+3.'a' - Append (adds to end of file)
+    with open('file.txt', 'a') as f:
+         f.write('\nNew line')
+
+4.'x' - Create (creates new file, fails if exists)
+    with open('file.txt', 'x') as f:
+         f.write('New file content')
+
+5.'b' - Binary (use with r/w/a, e.g., 'rb', 'wb')
+    with open('image.png', 'rb') as f:
+         binary_data = f.read()
+
+6.'t' - Text (default, e.g., 'rt', 'wt')
+    with open('file.txt', 'rt') as f:
+         text = f.read()
+
+7.'+' - Read and Write (e.g., 'r+', 'w+')
+    with open('file.txt', 'r+') as f:
+         content = f.read()
+         f.write('Additional content')

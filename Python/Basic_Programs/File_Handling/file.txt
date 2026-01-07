@@ -1,0 +1,4 @@
+Hello, this is a sample text file.
+This file is created using Python's file handling capabilities.
+We can write multiple lines to this file.
+File handling is an essential skill for any programmer.

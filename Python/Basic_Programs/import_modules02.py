@@ -1,0 +1,18 @@
+from Modules import import_module01
+
+print("Total Fruits:", import_module01.Total_Fruits)
+print("Fruit List:", import_module01.list)
+print("Number of Fruit Types:", len(import_module01.list))
+print("First Fruit Quantity (Apples):", import_module01.list[0])
+print("Second Fruit Quantity (Oranges):", import_module01.list[1])
+print("Third Fruit Quantity (Bananas):", import_module01.list[2])
+print("Sum of First and Second Fruit Quantities:", import_module01.list[0] + import_module01.list[1])
+print("Sum of All Fruit Quantities:", sum(import_module01.list))
+print("Average Fruit Quantity:", import_module01.Total_Fruits / len(import_module01.list))
+print("Maximum Fruit Quantity:", max(import_module01.list))
+print("Minimum Fruit Quantity:", min(import_module01.list))
+print("Fruit Quantities Sorted:", sorted(import_module01.list))
+print("Reversed Fruit Quantities:", list(reversed(import_module01.list)))
+print("Is there any fruit with quantity greater than 25?", any(x > 25 for x in import_module01.list))
+print("Is there any fruit with quantity less than 5?", any(x < 5 for x in import_module01.list))
+print("Count of Fruits with Quantity Greater than 15:", sum(1 for x in import_module01.list if x > 15))

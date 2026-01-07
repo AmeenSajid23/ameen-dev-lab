@@ -1,0 +1,48 @@
+ls >> Lists created files and folders
+ls -a >> Lists created files and folders and hidden files
+ls -l >> More data
+ls -la >> All data of files
+pwd >> Present wording directory
+cd >> Chnage directory
+cd .. >> Go back 1 directory back
+cd - >> last directory you were on
+mkdir >> creates a directory(folder)
+rm >> removes a file
+rm -rf >> removes directory
+mv <source> <destination>  >> Moving files
+ls <folder name> ~ List all files/folders
+mv <file name> <new file name> >>Rename files/folders
+touch <file_name> >> creates a file
+cat <file name>  >> shows content of file
+ln -s <source> <destination> | <(prevDir)../file_name> <new filename> >> creates a symbolic link for file
+ln -s <source_folder> <destination_folder> | ln -s fold1 fold2 >> Creates a symbolic link between two folders
+clear >> clears screen
+echo <xyz> >> prints statements
+man <command> >> manual for commands
+uname >> outputs OS
+uname -mrs & uname -a >> outputs OS, kernel version, processor
+whoami >> whos is using system currently
+tar -cvf <backup_filename> <sourceFileTobeBackedup> >>> creates a tar folder
+tar -xvf <backupFilename> >>> creates all backedup files in current directory/folder
+grep ex. cat linux.cmds.txt | grep tar -n >>> cat prints all output, pipe sends output to next command, then grep filters lines with "tar", and -n prints line numbers
+head -n <number> <filename> >>> prints first <number> of lines from a file
+tail -n <number> <filename> >>> prints last <number> of lines from a file
+printenv >>> prints all env variables for current runtime, you can set your own variables which won't be available in a new terminal
+echo $HOME, echo $PWD, echo $USER
+service --status-all >>> Shows all stopped (-)/running (+) services
+ps >>> outouts running processes
+ps aux >>> shows all processes
+kill <pID> >>> kill singular process using it's processID
+df OR df -h >>> disk usage
+chmod >>> change modifications used to assign permissions to user group and everyone
+ifconfig >>> prints networks running
+btop OR TOP >>> all processes and disk usage
+wget >>> Download data from internet
+curl >>> fetch data from internet
+apt ex.sudo apt install/uninstall <package> >>> package manager (cowsay,cmatrix)
+alias ex.alias c="clear" >>> creates a shortcut command and exclusive to current runtime
+whereis ex.whereis cmatrix >>> shows absolute path
+whatis ex.whatis cmatric >>> tells what it is
+neofetch >>> visual representation of usage
+sudo apt list >>> shows list of all the apt packages installed (apt is a kernel Linux package manager)
+sudo snap list >>> shows list of all snap packages installed (snap is for distro ubuntu)
