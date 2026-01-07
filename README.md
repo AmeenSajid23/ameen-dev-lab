@@ -1,2 +1,8 @@
 # ameen-dev-lab
-Personal engineering lab containing structured hands-on examples and experiments across Linux, Git, Python, Docker, Kubernetes, CI/CD, GitHub Actions, monitoring tools, and AWS. Built to learn, test, and maintain real-world DevOps workflows in one place.
+
+Personal engineering lab for hands-on learning and real-world implementations across Linux, Git, Python, Docker, Kubernetes, CI/CD, monitoring tools, and AWS.
+
+This repository contains structured examples, experiments, notes, and automation scripts used to build strong DevOps and cloud engineering skills.
+
+New content is continuously added as part of ongoing learning.
+
