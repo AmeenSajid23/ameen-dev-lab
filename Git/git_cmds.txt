@@ -1,0 +1,121 @@
+cat > Git/commands.txt << 'EOF'
+==============================
+        GIT COMMANDS MANUAL
+==============================
+
+GIT WORKFLOW (How Git works)
+
+Working Directory  →  Staging Area  →  Local Repository  →  Remote Repository
+(You edit files)      (git add)         (git commit)         (git push)
+
+Edit → Stage → Commit → Push → Safe history
+
+
+------------------------------
+BASIC DAILY COMMANDS
+------------------------------
+
+Check status:
+git status
+Shows modified, staged, untracked files.
+
+See what changed:
+git diff
+Shows line-by-line differences.
+
+Stage files:
+git add file.txt
+git add .
+Moves files to staging area.
+
+Commit changes:
+git commit -m "message"
+Creates permanent snapshot.
+
+Push to GitHub:
+git push origin main
+Uploads commits to cloud.
+
+
+------------------------------
+CLONE & REMOTES
+------------------------------
+
+Download repo:
+git clone <url>
+
+Check remotes:
+git remote -v
+
+
+------------------------------
+BRANCHING
+------------------------------
+
+Create branch:
+git checkout -b new-feature
+
+Switch branch:
+git checkout main
+
+Merge branch:
+git merge new-feature
+
+Delete branch:
+git branch -d new-feature
+
+
+------------------------------
+UNDO & FIX
+------------------------------
+
+Unstage file:
+git restore --staged file.txt
+
+Discard local change:
+git restore file.txt
+
+Fix last commit:
+git commit --amend
+
+Reset to previous commit:
+git reset --hard HEAD~1
+
+
+------------------------------
+STASH (Temporary pocket)
+------------------------------
+
+Save work:
+git stash
+
+Restore work:
+git stash pop
+
+
+------------------------------
+HISTORY & LOGS
+------------------------------
+
+git log
+git log --oneline
+git blame file.txt
+
+
+------------------------------
+TAGS (Releases)
+------------------------------
+
+git tag v1.0
+git push origin v1.0
+
+
+------------------------------
+VISUAL FLOW EXAMPLE
+------------------------------
+
+Create file → git add . → git commit -m "first commit" → git push
+
+You are now versioned, tracked, and cloud-backed forever.
+EOF
+
