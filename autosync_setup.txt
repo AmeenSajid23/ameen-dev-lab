@@ -1,0 +1,92 @@
+cat > autosync_setup.txt << 'EOF'
+====================================
+      GIT AUTOSYNC SETUP GUIDE
+====================================
+
+This guide creates a background daemon that:
+- Watches your repo
+- Automatically commits changes
+- Automatically pushes to GitHub
+
+
+------------------------------------
+REQUIREMENTS
+------------------------------------
+Ubuntu / WSL
+Git installed
+GitHub repo cloned
+
+
+------------------------------------
+STEP 1 – INSTALL WATCHER
+------------------------------------
+sudo apt install inotify-tools -y
+
+
+------------------------------------
+STEP 2 – CREATE AUTOSYNC SCRIPT
+------------------------------------
+nano autosync.sh
+
+Paste:
+
+#!/bin/bash
+cd "$(dirname "$0")"
+while inotifywait -r -e modify,create,delete,move .; do
+    git add .
+    git commit -m "Auto update $(date '+%Y-%m-%d %H:%M:%S')" || true
+    git push origin main
+done
+
+
+------------------------------------
+STEP 3 – MAKE EXECUTABLE
+------------------------------------
+chmod +x autosync.sh
+
+
+------------------------------------
+STEP 4 – COPY TO HOME SAFE ZONE
+------------------------------------
+cp autosync.sh ~/.autosync.sh
+chmod +x ~/.autosync.sh
+
+
+------------------------------------
+STEP 5 – REGISTER AUTO-START
+------------------------------------
+nano ~/.bashrc
+
+Add at bottom:
+
+if ! pgrep -f autosync.sh > /dev/null; then
+    nohup ~/.autosync.sh >/dev/null 2>&1 &
+fi
+
+
+------------------------------------
+STEP 6 – RESTART WSL
+------------------------------------
+wsl --shutdown
+
+
+------------------------------------
+STEP 7 – VERIFY
+------------------------------------
+ps aux | grep autosync
+
+
+------------------------------------
+STOP / START
+------------------------------------
+Stop:   pkill -f autosync.sh
+Start:  ~/.autosync.sh &
+
+
+------------------------------------
+RESULT
+------------------------------------
+Your repository now auto-commits and auto-pushes
+every file change automatically.
+EOF
+
