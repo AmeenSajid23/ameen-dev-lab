@@ -1,6 +1,6 @@
 # ameen-dev-lab
 
-!image(https://www.mindinventory.com/blog/wp-content/uploads/2024/07/Benefits-of-DevOps.webp)
+![image](https://www.mindinventory.com/blog/wp-content/uploads/2024/07/Benefits-of-DevOps.webp)
 
 Personal engineering lab for hands-on learning and real-world implementations across Linux, Git, Python, Docker, Kubernetes, CI/CD, monitoring tools, and AWS.
 
