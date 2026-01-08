@@ -1,0 +1,16 @@
+# docker commands with explanation
+# 1. docker build -t <image_name> <path> ~ Builds a Docker image from a Dockerfile located at the specified path and tags it with the given image name.
+# 2. docker run -d -p <host_port>:<container_port> <image_name> ~ Runs a Docker container in detached mode, mapping the specified host port to the container port.
+# 3. docker ps ~ Lists all running Docker containers.
+# 4. docker ps -a ~ Lists all Docker containers, including those that are stopped.
+# 5. docker stop <container_id> ~ Stops a running Docker container using its container ID.
+# 6. docker rm <container_id> ~ Removes a stopped Docker container using its container ID.
+# 7. docker rmi <image_name> ~ Removes a Docker image using its image name.
+# 8. docker logs <container_id> ~ Displays the logs of a Docker container using its container ID.
+# 9. docker exec -it <container_id> /bin/bash ~ Opens an interactive bash shell inside a running Docker container.
+# 10. docker pull <image_name> ~ Downloads a Docker image from a Docker registry using its image name.
+# 11. docker push <image_name> ~ Uploads a Docker image to a Docker registry using its image name.
+# 12. docker inspect <container_id> ~ Displays detailed information about a Docker container using its container ID.
+# 13. docker-compose up -d ~ Starts all services defined in a docker-compose.yml file in detached mode.
+# 14. docker-compose down ~ Stops and removes all services defined in a docker-compose.yml file.
+# 15. docker network ls ~ 
