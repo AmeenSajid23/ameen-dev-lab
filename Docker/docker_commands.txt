@@ -1,16 +1,181 @@
-docker commands with explanation
-1. docker build -t <image_name> <path> ~ Builds a Docker image from a Dockerfile located at the specified path and tags it with the given image name.
-2. docker run -d -p <host_port>:<container_port> <image_name> ~ Runs a Docker container in detached mode, mapping the specified host port to the container port.
-3. docker ps ~ Lists all running Docker containers.
-4. docker ps -a ~ Lists all Docker containers, including those that are stopped.
-5. docker stop <container_id> ~ Stops a running Docker container using its container ID.
-6. docker rm <container_id> ~ Removes a stopped Docker container using its container ID.
-7. docker rmi <image_name> ~ Removes a Docker image using its image name.
-8. docker logs <container_id> ~ Displays the logs of a Docker container using its container ID.
-9. docker exec -it <container_id> /bin/bash ~ Opens an interactive bash shell inside a running Docker container.
-10. docker pull <image_name> ~ Downloads a Docker image from a Docker registry using its image name.
-11. docker push <image_name> ~ Uploads a Docker image to a Docker registry using its image name.
-12. docker inspect <container_id> ~ Displays detailed information about a Docker container using its container ID.
-13. docker-compose up -d ~ Starts all services defined in a docker-compose.yml file in detached mode.
-14. docker-compose down ~ Stops and removes all services defined in a docker-compose.yml file.
-15. docker network ls ~ 
+Docker Commands with Explanation
+
+1. docker build -t <image_name> <path>
+Builds a Docker image from a Dockerfile located at the specified path and tags it with the given image name.
+
+2. docker run -d -p <host_port>:<container_port> <image_name>
+Runs a Docker container in detached mode, mapping the specified host port to the container port.
+
+3. docker ps
+Lists all running Docker containers.
+
+4. docker ps -a
+Lists all Docker containers, including those that are stopped.
+
+5. docker stop <container_id>
+Stops a running Docker container using its container ID.
+
+6. docker rm <container_id>
+Removes a stopped Docker container using its container ID.
+
+7. docker rmi <image_name>
+Removes a Docker image using its image name.
+
+8. docker logs <container_id>
+Displays the logs of a Docker container using its container ID.
+
+9. docker exec -it <container_id> /bin/bash
+Opens an interactive bash shell inside a running Docker container.
+
+10. docker pull <image_name>
+Downloads a Docker image from a Docker registry using its image name.
+
+11. docker push <image_name>
+Uploads a Docker image to a Docker registry using its image name.
+
+12. docker inspect <container_id>
+Displays detailed information about a Docker container using its container ID.
+
+13. docker-compose up -d
+Starts all services defined in a docker-compose.yml file in detached mode.
+
+14. docker-compose down
+Stops and removes all services defined in a docker-compose.yml file.
+
+15. docker network ls
+Lists all Docker networks present on your system.
+
+16. docker network create <network_name>
+Creates a custom Docker network to allow containers to communicate with each other privately.
+
+17. docker network rm <network_name>
+Deletes a Docker network.
+
+18. docker volume ls
+Lists all Docker volumes.
+
+19. docker volume create <volume_name>
+Creates a Docker volume for persistent storage.
+
+20. docker volume rm <volume_name>
+Removes a Docker volume.
+
+21. docker images
+Lists all Docker images available locally.
+
+22. docker container ls
+Lists all running containers.
+
+23. docker start <container_id>
+Starts a stopped container.
+
+24. docker restart <container_id>
+Restarts a running container.
+
+25. docker pause <container_id>
+Temporarily freezes a running container.
+
+26. docker unpause <container_id>
+Resumes a paused container.
+
+27. docker stats
+Shows live CPU, memory, disk, and network usage of running containers.
+
+28. docker system df
+Shows how much disk space Docker is using.
+
+29. docker system prune
+Removes all unused containers, images, networks, and volumes.
+
+30. docker tag <image_name> <new_name>
+Creates a new tag for an existing image.
+
+31. docker login
+Logs you into Docker Hub or another registry.
+
+32. docker logout
+Logs you out of Docker Hub.
+
+33. docker save -o file.tar <image_name>
+Exports a Docker image to a tar file.
+
+34. docker load -i file.tar
+Imports a Docker image from a tar file.
+
+35. docker cp <container_id>:<path> <local_path>
+Copies files between a container and the host.
+
+36. docker top <container_id>
+Shows running processes inside a container.
+
+37. docker diff <container_id>
+Shows filesystem changes made inside a container.
+
+38. docker commit <container_id> <new_image>
+Creates a new image from a modified running container.
+
+39. docker build --no-cache -t <image_name> <path>
+Builds an image without using cached layers.
+
+40. docker run --name <container_name> -it <image_name>
+Runs a container with a custom name in interactive mode.
+
+41. docker run --rm <image_name>
+Automatically removes the container after it stops.
+
+42. docker logs -f <container_id>
+Shows live streaming logs.
+
+43. docker attach <container_id>
+Attaches your terminal to a running container.
+
+44. docker rename <old_name> <new_name>
+Renames a container.
+
+45. docker update --restart=always <container_id>
+Ensures the container always restarts after crash or reboot.
+
+46. docker events
+Shows real-time Docker events.
+
+47. docker info
+Displays Docker system-wide information.
+
+48. docker history <image_name>
+Shows image layer history.
+
+49. docker export <container_id> -o container.tar
+Exports a container filesystem.
+
+50. docker import container.tar <image_name>
+Imports a container as an image.
+
+51. docker run -v <volume>:/path <image_name>
+Mounts a volume inside a container.
+
+52. docker run -e VAR=value <image_name>
+Sets environment variables inside a container.
+
+53. docker exec <container_id> <command>
+Runs a command inside a running container.
+
+54. docker system prune -a
+Removes all unused containers, images, and volumes aggressively.
+
+55. docker network inspect <network_name>
+Shows detailed network info.
+
+56. docker volume inspect <volume_name>
+Shows detailed volume info.
+
+57. docker port <container_id>
+Shows port mappings of a container.
+
+58. docker kill <container_id>
+Forcibly stops a container.
+
+59. docker wait <container_id>
+Waits until a container stops and returns its exit code.
+
+60. docker builder prune
+Clears Docker build cach
