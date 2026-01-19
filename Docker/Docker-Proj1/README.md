@@ -123,5 +123,27 @@ Containerization using Docker
 Service orchestration using Docker Compose
 Clean and production-style folder structure
 
+✅ Optional (Extra marks)
+
+Update docker-compose.yml to use images instead of build:
+
+services:
+  backend:
+    image: ameensajid23/docker-proj1-backend:latest
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: ameensajid23/docker-proj1-frontend:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+
+Then anyone can run your app with: docker compose up
+
+No source code needed. That’s real-world behavior.
+
 👤 Author
 Ameen Sajid
